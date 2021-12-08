@@ -1,0 +1,70 @@
+<html>
+<head>
+<title> Custom Game </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+	sjs.open("target", 1280, 720);
+	var background = new sjs.Image("Images/city2.png");
+	background.setSize(1280, 720);
+
+	var menuBackground = new sjs.Image("Images/midnight.png");
+	menuBackground.setSize(800, 156.25);
+	menuBackground.center().offset(0, -200);
+
+	var menu = new sjs.Text("CONTROLS", 128, "cyan");
+	menu.setSize(400, 125);
+	menu.center().offset(0, -200);
+
+	var menu = new sjs.Button("Menu", function(){
+		window.location = "index.html";
+	});
+
+	menu.center().offset(0, -83);
+
+	var controlsBackground = new sjs.Image("Images/midnight.png");
+	controlsBackground.setSize(1000, 325);
+	controlsBackground.center().offset(0, 125);
+
+	var control = new sjs.Text("A - Move Left", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 0);
+
+	var control = new sjs.Text("D - Move Right", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*2);
+
+	var control = new sjs.Text("W - Jump, Double Jump, and Ceiling Glide", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*4);
+
+	var control = new sjs.Text("S - Plummet Down", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*6);
+
+	var control = new sjs.Text("Space - Dash (Temporary Invincibility)", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*8);
+
+	var control = new sjs.Text("Shift - Wall Climb", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*10);
+
+	var control = new sjs.Text("Right Click - Directional Dash Towards The Mouse", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*12);
+
+	var control = new sjs.Text("Left Click - Throw Sword", 18, "cyan");
+	control.setSize(400, 125);
+	control.center().offset(0, 18*14);
+	
+} //end start
+
+</script>
+</head>
+<body onload="start()">
+<h1> Custom Game </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
