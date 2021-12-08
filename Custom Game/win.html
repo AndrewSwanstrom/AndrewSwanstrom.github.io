@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> Custom Game </title>
+<script src="simply.js"></script>
+<script>
+function start(){
+	sjs.open("target", 1280, 720);
+	var background = new sjs.Image("Images/city.png");
+	background.setSize(1280, 720);
+
+	var menuBackground = new sjs.Image("Images/midnight.png");
+	menuBackground.setSize(800, 156.25);
+	menuBackground.center().offset(0, -200);
+
+	var menu = new sjs.Text("YOU WIN!", 128, "cyan");
+	menu.setSize(400, 125);
+	menu.center().offset(0, -200);
+
+	var play = new sjs.Button("Play Again?", function(){
+		window.location = "level.html";
+	});
+
+	play.center();
+
+	var menu = new sjs.Button("Menu", function(){
+		window.location = "index.html";
+	});
+
+	menu.center().offset(0, 100);
+	
+} //end start
+
+</script>
+</head>
+<body onload="start()">
+<h1> Custom Game </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
